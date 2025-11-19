@@ -1,8 +1,14 @@
 import 'dotenv/config';
+import express from 'express';
 import { Telegraf, session } from 'telegraf';
 import { schedulePoll, sendPollUser } from './pollScheduler.js';
 import { upsertUser, saveResponse } from './db.js';
 import fs from 'fs';
+
+const app = express();
+const PORT = process.env.PORT || 3000;
+app.get('/', (req, res) => res.send('Bot is running'));
+app.listen(PORT, () => console.log(`Listening on port ${PORT}`));
 
 const bot = new Telegraf(process.env.BOT_TOKEN);
 
