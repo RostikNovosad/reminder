@@ -54,7 +54,7 @@ bot.on('callback_query', async (ctx) => {
     await ctx.answerCbQuery('⏳ Нагадування через 30 хвилин встановлено');
     setTimeout(() => {
       sendPollUser(user, bot);
-    }, 30000);
+    }, 1800000);
     await ctx.editMessageReplyMarkup({ inline_keyboard: [] });
     await ctx.reply('Встановлено нагадування через 30 хвилин ⏳');
   }
@@ -62,7 +62,7 @@ bot.on('callback_query', async (ctx) => {
     await ctx.answerCbQuery('⏳ Нагадування через 1 годину встановлено');
     setTimeout(() => {
       sendPollUser(user, bot);
-    }, 60000);
+    }, 3600000);
     await ctx.editMessageReplyMarkup({ inline_keyboard: [] });
     await ctx.reply('Встановлено нагадування через 1 годину ⏳');
   }
