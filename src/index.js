@@ -10,7 +10,7 @@ const PORT = process.env.PORT || 3000;
 app.get('/', (req, res) => res.send('Bot is running'));
 app.listen(PORT, () => console.log(`Listening on port ${PORT}`));
 
-const bot = new Telegraf(process.env.BOT_TOKEN);
+const bot = new Telegraf('8374639778:AAGtsLfhjYop6OOHXLrEwynfUmFtY8hn6B8');
 
 bot.start(async (ctx) => {
   const user = ctx.from;
